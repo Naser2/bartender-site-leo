@@ -44,9 +44,9 @@ export const siteConfig = {
     },
   ],
   links: {
-    instagram: "https://instagram.com/mboa_nyc",
-    twitter: "https://twitter.com/mboa_nyc",
-    tiktok: "https://tiktok.com/@mboa_nyc",
+    instagram: "https://www.instagram.com/leo_ness__/",
+    twitter: "https://www.instagram.com/leo_ness__/",
+    tiktok: "https://www.instagram.com/leo_ness__/",
     whatsapp: "https://wa.me/1234567890",
     email: "mailto:hello@mboa-nyc.com",
   },

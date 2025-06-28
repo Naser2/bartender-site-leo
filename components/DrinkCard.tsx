@@ -33,23 +33,23 @@ export function DrinkCard({ drink }: DrinkCardProps) {
   return (
     <>
       <motion.div
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
         whileHover={{ y: -8 }}
         whileTap={{ scale: 0.95 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
         <Card
-          className="glass-morphism hover:border-yellow-400/50 transition-all duration-300 cursor-pointer group"
           isPressable
+          className="glass-morphism hover:border-yellow-400/50 transition-all duration-300 cursor-pointer group"
           onPress={onOpen}
         >
           <CardBody className="p-0">
             <div className="relative overflow-hidden rounded-t-lg">
               <Image
-                src={drink.image}
                 alt={drink.name}
-                width={400}
-                height={300}
                 className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                height={300}
+                src={drink.image}
+                width={400}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute top-3 right-3">
@@ -92,8 +92,8 @@ export function DrinkCard({ drink }: DrinkCardProps) {
 
           <CardFooter className="px-6 pb-6">
             <Button
-              size="sm"
               className="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold hover:shadow-lg hover:shadow-yellow-400/25"
+              size="sm"
             >
               View Details
             </Button>
@@ -103,13 +103,13 @@ export function DrinkCard({ drink }: DrinkCardProps) {
 
       {/* Drink Details Modal */}
       <Modal
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-        size="2xl"
-        className="glass-morphism"
         backdrop="blur"
-        scrollBehavior="inside"
+        className="glass-morphism"
+        isOpen={isOpen}
         placement="center"
+        scrollBehavior="inside"
+        size="2xl"
+        onOpenChange={onOpenChange}
       >
         <ModalContent>
           {(onClose) => (
@@ -135,11 +135,11 @@ export function DrinkCard({ drink }: DrinkCardProps) {
                 <div className="space-y-6">
                   <div className="relative rounded-lg overflow-hidden">
                     <Image
-                      src={drink.image}
                       alt={drink.name}
-                      width={600}
-                      height={400}
                       className="w-full h-64 object-cover"
+                      height={400}
+                      src={drink.image}
+                      width={600}
                     />
                   </div>
 
@@ -173,7 +173,7 @@ export function DrinkCard({ drink }: DrinkCardProps) {
                           key={ingredient}
                           className="flex items-center gap-2 p-2 rounded-lg bg-white/5"
                         >
-                          <span className="w-2 h-2 rounded-full bg-yellow-400"></span>
+                          <span className="w-2 h-2 rounded-full bg-yellow-400" />
                           <span className="text-sm text-gray-300">
                             {ingredient}
                           </span>
