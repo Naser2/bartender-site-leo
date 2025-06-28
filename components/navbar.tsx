@@ -131,7 +131,7 @@ export const Navbar = () => {
           </svg>
         </Link>
         <ThemeSwitch />
-        <NavbarMenuToggle id="mboa-navbar-menu-toggle" className="!text-white text-white [&>span]:!text-white [&>span]:text-white [&>span]:!bg-white [&>span]:bg-white [&>span]:before:!bg-white [&>span]:after:!bg-white" />
+        <NavbarMenuToggle id="mboa-navbar-menu-toggle" className="!text-white text-white [&>span]:!text-white [&>span]:text-white [&>span]:!text-white [&>span]:text-white [&>span]:before:!text-white [&>span]:after:!text-white" />
       </NavbarContent>
 
       <NavbarMenu>
