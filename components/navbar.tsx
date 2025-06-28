@@ -154,6 +154,38 @@ export const Navbar = () => {
               </NextLink>
             </NavbarMenuItem>
           ))}
+          
+          {/* Sidebar Image */}
+          <div className="mt-6 mx-2">
+            <div className="relative rounded-lg overflow-hidden">
+              <Image
+                src="/325484665_2233914083457650_8836665483194425914_n.jpg"
+                alt="MBOA-NYC Creative Experience"
+                width={400}
+                height={500}
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent">
+                <div className="absolute bottom-4 left-4 right-4">
+                  <h3 className="text-white text-lg font-bold mb-2">
+                    It&apos;s Time to Get Creative.
+                  </h3>
+                  <div className="inline-block bg-mboa-gold text-black px-3 py-1 rounded-full text-sm font-semibold mb-2">
+                    100% ORGANIC
+                  </div>
+                  <div>
+                    <Link
+                      href="/contact"
+                      onClick={handleMenuItemClick}
+                      className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md text-sm font-semibold transition-colors duration-300"
+                    >
+                      BOOK EXPERIENCE
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </NavbarMenu>
     </HeroUINavbar>
