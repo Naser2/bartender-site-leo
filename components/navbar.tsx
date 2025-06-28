@@ -134,20 +134,23 @@ export const Navbar = () => {
         <NavbarMenuToggle id="mboa-navbar-menu-toggle" className="!text-white text-white [&>span]:!text-white [&>span]:text-white [&>span]:!text-white [&>span]:text-white [&>span]:before:!text-white [&>span]:after:!text-white" />
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className="bg-white dark:bg-gray-900">
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <NextLink
                 href={item.href}
                 onClick={handleMenuItemClick}
+                style={{
+                  color: 'black',
+                  fontSize: '0.9125rem',
+                  fontWeight: 600,
+                  letterSpacing: '0.0125em',
+                  textTransform: 'uppercase'
+                }}
                 className={clsx(
-                  "w-full block py-3 px-2 text-lg transition-colors duration-300 text-white !text-white",
-                  index === 2
-                    ? "text-white hover:text-white"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "text-white hover:text-white"
-                      : "text-white hover:text-white"
+                  "w-full block py-3 px-2 transition-colors duration-300 dark:!text-white",
+                  "hover:text-mboa-gold dark:hover:text-mboa-gold"
                 )}
               >
                 {item.label}
