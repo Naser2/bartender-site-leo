@@ -77,9 +77,7 @@ function ContactContent() {
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="text-white">Let&apos;s </span>
-              <span className="text-mboa-gold">
-                Connect
-              </span>
+              <span className="text-mboa-gold">Connect</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready to elevate your event with Afro Pop mixology? Let&apos;s
@@ -121,9 +119,13 @@ function ContactContent() {
                   {contactOptions.map((option) => (
                     <motion.div
                       key={option.title}
-                      whileHover={{ 
+                      whileHover={{
                         scale: 1.02,
-                        transition: { type: "spring", stiffness: 300, damping: 20 }
+                        transition: {
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 20,
+                        },
                       }}
                       whileTap={{ scale: 0.98 }}
                     >
@@ -131,10 +133,10 @@ function ContactContent() {
                         <CardBody className="p-6">
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-4">
-                              <motion.div 
+                              <motion.div
                                 className="text-3xl"
-                                whileHover={{ rotate: [0, -10, 10, 0] }}
                                 transition={{ duration: 0.5 }}
+                                whileHover={{ rotate: [0, -10, 10, 0] }}
                               >
                                 {option.icon}
                               </motion.div>
@@ -165,7 +167,7 @@ function ContactContent() {
               </motion.div>
 
               {/* Availability & Pricing */}
-              <motion.div variants={fadeInVariants} className="mt-8">
+              <motion.div className="mt-8" variants={fadeInVariants}>
                 <Card className="glass-morphism">
                   <CardBody className="p-6">
                     <h3 className="text-xl font-bold mboa-gold mb-4">
@@ -225,6 +227,28 @@ function ContactContent() {
                       ))}
                     </div>
                   </CardBody>
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    {[...Array(6)].map((_, i) => (
+                      <motion.div
+                        key={i}
+                        animate={{
+                          y: [-20, -100],
+                          opacity: [0, 1, 0],
+                        }}
+                        className="absolute w-2 h-2 bg-yellow-400/30 rounded-full"
+                        style={{
+                          left: `${Math.random() * 100}%`,
+                          top: `${Math.random() * 100}%`,
+                        }}
+                        transition={{
+                          duration: 3 + Math.random() * 2,
+                          repeat: Infinity,
+                          delay: Math.random() * 2,
+                          ease: "easeOut",
+                        }}
+                      />
+                    ))}
+                  </div>
                 </Card>
               </motion.div>
 

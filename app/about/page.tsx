@@ -35,13 +35,14 @@ function AboutContent() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800">
       {/* Hero Section */}
-      <section 
+      <section
         className="relative py-12 md:py-20 px-4 md:px-8 lg:px-12 xl:px-16"
         style={{
-          backgroundImage: 'linear-gradient(rgba(15, 15, 15, 0.6), rgba(15, 15, 15, 0.6)), url("/67-Orange-Street-Bar-Harlem-Leo-Dassie-Mixing-Up.jpg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundImage:
+            'linear-gradient(rgba(15, 15, 15, 0.6), rgba(15, 15, 15, 0.6)), url("/67-Orange-Street-Bar-Harlem-Leo-Dassie-Mixing-Up.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="max-w-7xl 2xl:max-w-none 2xl:px-24 mx-auto">
@@ -53,9 +54,7 @@ function AboutContent() {
           >
             <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold mb-6">
               <span className="text-white">About </span>
-              <span className="text-mboa-gold">
-                MBOA-NYC
-              </span>
+              <span className="text-mboa-gold">MBOA-NYC</span>
             </h1>
             <p className="text-lg md:text-xl xl:text-2xl text-gray-300 max-w-3xl xl:max-w-4xl mx-auto">
               Where curated cultured libations meet sophisticated experiences,
@@ -90,11 +89,55 @@ function AboutContent() {
                       blending global cultural influences with sophisticated
                       cocktail craftsmanship through MBOA-NYC.
                     </p>
+                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                      {[...Array(6)].map((_, i) => (
+                        <motion.div
+                          key={i}
+                          animate={{
+                            y: [-20, -100],
+                            opacity: [0, 1, 0],
+                          }}
+                          className="absolute w-2 h-2 bg-yellow-400/30 rounded-full"
+                          style={{
+                            left: `${Math.random() * 100}%`,
+                            top: `${Math.random() * 100}%`,
+                          }}
+                          transition={{
+                            duration: 3 + Math.random() * 2,
+                            repeat: Infinity,
+                            delay: Math.random() * 2,
+                            ease: "easeOut",
+                          }}
+                        />
+                      ))}
+                    </div>
                     <p>
                       Every cocktail tells a story, every event becomes an
                       experience, and every guest leaves with memories that last
                       long after the final pour. This is the MBOA-NYC promise.
                     </p>
+                  </div>
+                  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    {[...Array(6)].map((_, i) => (
+                      <motion.div
+                        key={i}
+                        animate={{
+                          y: [-20, -100],
+                          opacity: [0, 1, 0],
+                        }}
+                        className="absolute w-2 h-2 bg-yellow-400/30 rounded-full"
+                        style={{
+                          left: `${Math.random() * 100}%`,
+                          top: `${Math.random() * 100}%`,
+                        }}
+                        transition={{
+                          duration: 3 + Math.random() * 2,
+                          repeat: Infinity,
+                          delay: Math.random() * 2,
+                          ease: "easeOut",
+                        }}
+                      />
+                    ))}
                   </div>
                 </CardBody>
               </Card>

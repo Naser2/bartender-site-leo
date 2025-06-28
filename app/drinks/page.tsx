@@ -343,13 +343,14 @@ function DrinksContent() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800">
       {/* Hero Section */}
-      <section 
+      <section
         className="relative py-20 px-6"
         style={{
-          backgroundImage: 'linear-gradient(rgba(15, 15, 15, 0.7), rgba(15, 15, 15, 0.7)), url("/67-Orange-Street-Bar-Harlem-Old-Fashioned.jpg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundImage:
+            'linear-gradient(rgba(15, 15, 15, 0.7), rgba(15, 15, 15, 0.7)), url("/67-Orange-Street-Bar-Harlem-Old-Fashioned.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="max-w-7xl mx-auto">
@@ -361,16 +362,35 @@ function DrinksContent() {
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="text-white">Signature </span>
-              <span className="text-mboa-gold">
-                Cocktails
-              </span>
+              <span className="text-mboa-gold">Cocktails</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               MBOA-NYC Curated Cultured Libations - Each cocktail tells a story,
               crafted with passion and inspired by global flavors. Every sip is
               a journey through traditions, innovation, and artistry.
             </p>
-
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              {[...Array(6)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  animate={{
+                    y: [-20, -100],
+                    opacity: [0, 1, 0],
+                  }}
+                  className="absolute w-2 h-2 bg-yellow-400/30 rounded-full"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                  }}
+                  transition={{
+                    duration: 3 + Math.random() * 2,
+                    repeat: Infinity,
+                    delay: Math.random() * 2,
+                    ease: "easeOut",
+                  }}
+                />
+              ))}
+            </div>
             {/* Search and Filter */}
             <motion.div
               className="max-w-2xl mx-auto space-y-6"
@@ -380,7 +400,7 @@ function DrinksContent() {
                 className="glass-morphism"
                 classNames={{
                   input: "px-4 py-2",
-                  inputWrapper: "px-4 py-3"
+                  inputWrapper: "px-4 py-3",
                 }}
                 placeholder="Search drinks, ingredients, or flavors..."
                 size="lg"
@@ -396,11 +416,11 @@ function DrinksContent() {
                     key={category}
                     animate={{ scale: 1, opacity: 1 }}
                     initial={{ scale: 0.8, opacity: 0 }}
-                    transition={{ 
+                    transition={{
                       delay: index * 0.05,
                       type: "spring",
                       stiffness: 300,
-                      damping: 20
+                      damping: 20,
                     }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -439,7 +459,28 @@ function DrinksContent() {
               </motion.div>
             ))}
           </motion.div>
-
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            {[...Array(6)].map((_, i) => (
+              <motion.div
+                key={i}
+                animate={{
+                  y: [-20, -100],
+                  opacity: [0, 1, 0],
+                }}
+                className="absolute w-2 h-2 bg-yellow-400/30 rounded-full"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                }}
+                transition={{
+                  duration: 3 + Math.random() * 2,
+                  repeat: Infinity,
+                  delay: Math.random() * 2,
+                  ease: "easeOut",
+                }}
+              />
+            ))}
+          </div>
           {/* Empty State */}
           {filteredDrinks.length === 0 && (
             <motion.div
@@ -501,6 +542,28 @@ function DrinksContent() {
                   👨‍🍳 Meet the Mixologist
                 </Button>
               </div>
+            </div>
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              {[...Array(6)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  animate={{
+                    y: [-20, -100],
+                    opacity: [0, 1, 0],
+                  }}
+                  className="absolute w-2 h-2 bg-yellow-400/30 rounded-full"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                  }}
+                  transition={{
+                    duration: 3 + Math.random() * 2,
+                    repeat: Infinity,
+                    delay: Math.random() * 2,
+                    ease: "easeOut",
+                  }}
+                />
+              ))}
             </div>
           </motion.div>
         </div>
