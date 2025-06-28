@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --afro-dark: #0F0F0F;
+  --afro-gold: #E9B96E;
+  --afro-soft-dark: #3C3C3C;
+  --afro-green: #91D18B;
+  --afro-violet: #8E44AD;
+  --afro-warm-orange: #FF8C42;
+}
+
+.afro-dark { background-color: var(--afro-dark); }
+.afro-gold { color: var(--afro-gold); }
+.afro-soft-dark { background-color: var(--afro-soft-dark); }
+.afro-green { color: var(--afro-green); }
+.afro-violet { color: var(--afro-violet); }
+
+.bartender-gradient {
+  background: linear-gradient(135deg, var(--afro-dark) 0%, var(--afro-soft-dark) 100%);
+}
+
+.cocktail-shimmer {
+  background: linear-gradient(45deg, var(--afro-gold), var(--afro-green), var(--afro-violet));
+  background-size: 300% 300%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-image {
+  background-image: 
+    linear-gradient(rgba(15, 15, 15, 0.4), rgba(15, 15, 15, 0.6)),
+    url('/IMG_3282.JPG');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.glass-morphism {
+  background: rgba(60, 60, 60, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(233, 185, 110, 0.2);
+}
+
+/* Page transition styles */
+.page-transition {
+  transition: all 0.4s ease-in-out;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
