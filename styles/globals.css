@@ -100,5 +100,5 @@ html {
 #mboa-navbar-menu-toggle *::before,
 #mboa-navbar-menu-toggle *::after {
   /* background-color: white !important; */
-  border-color: white !important;
+  border-color: transparent !important;
 }
