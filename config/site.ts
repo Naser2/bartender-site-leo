@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "DJ Pourmaster",
-  description: "Master of cocktails, curator of vibes. Afro Pop bartender bringing liquid artistry to life.",
+  name: "MBOA-NYC",
+  description: "MBOA-NYC Curated Cultured Libations and Experiences by LEO. Premium cocktail experiences and mixology services.",
   navItems: [
     {
       label: "Home",
@@ -44,10 +44,10 @@ export const siteConfig = {
     },
   ],
   links: {
-    instagram: "https://instagram.com/djpourmaster",
-    twitter: "https://twitter.com/djpourmaster",
-    tiktok: "https://tiktok.com/@djpourmaster",
+    instagram: "https://instagram.com/mboa_nyc",
+    twitter: "https://twitter.com/mboa_nyc",
+    tiktok: "https://tiktok.com/@mboa_nyc",
     whatsapp: "https://wa.me/1234567890",
-    email: "mailto:hello@djpourmaster.com",
+    email: "mailto:hello@mboa-nyc.com",
   },
 };

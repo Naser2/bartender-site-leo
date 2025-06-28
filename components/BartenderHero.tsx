@@ -69,9 +69,9 @@ export function BartenderHero() {
         >
           {/* Main heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
-            <span className="block">DJ</span>
+            <span className="block">MBOA-NYC</span>
             <span className="block cocktail-shimmer bg-clip-text text-transparent">
-              Pourmaster
+              by Leo Dassie
             </span>
           </h1>
 
@@ -82,9 +82,9 @@ export function BartenderHero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Master of cocktails, curator of vibes. 
+            MBOA-NYC Curated Cultured Libations and Experiences by LEO
             <br />
-            <span className="afro-gold">Afro Pop bartender bringing liquid artistry to life.</span>
+            <span className="afro-gold">Master of cocktails, curator of vibes. Afro Pop bartender bringing liquid artistry to life.</span>
           </motion.p>
 
           {/* Animated accent line */}
@@ -111,7 +111,7 @@ export function BartenderHero() {
             onPress={() => startTransition(() => {})}
             isLoading={isPending}
           >
-            🍹 Explore Signature Drinks
+            🍹 Explore Signature Cocktails
           </Button>
 
           <Button

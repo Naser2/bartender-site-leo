@@ -44,10 +44,10 @@ function AboutContent() {
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="text-white">About </span>
-              <span className="cocktail-shimmer bg-clip-text text-transparent">DJ Pourmaster</span>
+              <span className="cocktail-shimmer bg-clip-text text-transparent">MBOA-NYC</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Where Afro Pop rhythms meet liquid artistry, creating unforgettable experiences one cocktail at a time.
+              Where curated cultured libations meet sophisticated experiences, creating unforgettable moments one cocktail at a time.
             </p>
           </motion.div>
 
@@ -62,16 +62,16 @@ function AboutContent() {
             <motion.div variants={fadeInVariants} className="space-y-6">
               <Card className="glass-morphism">
                 <CardBody className="p-8">
-                  <h2 className="text-3xl font-bold afro-gold mb-6">The Story Behind the Pour</h2>
+                  <h2 className="text-3xl font-bold afro-gold mb-6">Meet Leo Dassie</h2>
                   <div className="space-y-4 text-gray-300 leading-relaxed">
                     <p>
-                      Born from a passion for both music and mixology, DJ Pourmaster has revolutionized the nightlife scene by blending Afro Pop culture with sophisticated cocktail craftsmanship.
+                      Master of cocktails, curator of vibes. Leo Dassie is an Afro Pop bartender bringing liquid artistry to life through MBOA-NYC's curated cultured libations and experiences.
                     </p>
                     <p>
-                                             With over 8 years of experience behind the bar and behind the decks, I&apos;ve crafted signature drinks that tell stories, evoke emotions, and create connections that last long after the last sip.
+                      With over 8 years of experience behind the bar and behind the decks, Leo has revolutionized the nightlife scene by blending global cultural influences with sophisticated cocktail craftsmanship through MBOA-NYC.
                     </p>
                     <p>
-                      My approach is simple: every cocktail should be a journey, every event should be an experience, and every guest should leave with a smile and a story to tell.
+                      Every cocktail tells a story, every event becomes an experience, and every guest leaves with memories that last long after the final pour. This is the MBOA-NYC promise.
                     </p>
                   </div>
                 </CardBody>
@@ -80,15 +80,17 @@ function AboutContent() {
               {/* Skills/Specialties */}
               <Card className="glass-morphism">
                 <CardBody className="p-8">
-                  <h3 className="text-2xl font-bold afro-green mb-4">Specialties</h3>
+                  <h3 className="text-2xl font-bold afro-green mb-4">MBOA-NYC Specialties</h3>
                   <div className="grid grid-cols-2 gap-4">
                     {[
-                      'Afro-inspired Cocktails',
-                      'Event Bartending',
-                      'Cocktail Workshops',
-                      'Private Parties',
-                      'Corporate Events',
-                      'Signature Drinks',
+                      'Curated Cocktail Experiences',
+                      'Cultural Libation Curation',
+                      'Premium Event Bartending',
+                      'Cocktail Workshops & Classes',
+                      'Private Party Services',
+                      'Corporate Event Excellence',
+                      'Signature Drink Development',
+                      'Mixology Consulting',
                     ].map((skill) => (
                       <motion.div
                         key={skill}
@@ -116,7 +118,7 @@ function AboutContent() {
               >
                 <Image
                   src="/IMG_6824.JPG"
-                  alt="DJ Pourmaster in action"
+                  alt="Leo Dassie - MBOA-NYC in action"
                   width={600}
                   height={800}
                   className="w-full h-auto object-cover"
@@ -132,7 +134,7 @@ function AboutContent() {
                 >
                   <Image
                     src="/IMG_6827.JPG"
-                    alt="Cocktail crafting"
+                    alt="MBOA-NYC cocktail crafting"
                     width={300}
                     height={400}
                     className="w-full h-48 object-cover"
@@ -145,7 +147,7 @@ function AboutContent() {
                 >
                   <Image
                     src="/IMG_6829.JPG"
-                    alt="Bartending expertise"
+                    alt="MBOA-NYC mixology expertise"
                     width={300}
                     height={400}
                     className="w-full h-48 object-cover"
@@ -164,7 +166,7 @@ function AboutContent() {
           >
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-white mb-4">
-                Ready for an <span className="afro-gold">Unforgettable Experience?</span>
+                Ready for an <span className="afro-gold">MBOA-NYC Experience?</span>
               </h3>
               <SocialIcons className="justify-center" />
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
@@ -174,7 +176,7 @@ function AboutContent() {
                   size="lg"
                   className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold px-8 py-3 rounded-full hover:shadow-2xl hover:shadow-yellow-400/25 transition-all duration-300"
                 >
-                  🍹 View Signature Drinks
+                  🍹 View Signature Cocktails
                 </Button>
                 <Button
                   as={Link}

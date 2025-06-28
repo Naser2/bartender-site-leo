@@ -12,6 +12,7 @@ import { Link } from "@heroui/link";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
+import Image from "next/image";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
@@ -22,10 +23,16 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-3" href="/">
-            <div className="text-2xl">🍹</div>
+            <Image
+              src="/MBOA_LOGO.jpg"
+              alt="MBOA-NYC Logo"
+              width={40}
+              height={40}
+              className="rounded-full object-cover"
+            />
             <div>
-              <p className="font-bold text-inherit text-xl afro-gold">DJ Pourmaster</p>
-              <p className="text-xs text-gray-400">Afro Pop Mixologist</p>
+              <p className="font-bold text-inherit text-xl afro-gold">MBOA-NYC</p>
+              <p className="text-xs text-gray-400">by Leo Dassie</p>
             </div>
           </NextLink>
         </NavbarBrand>

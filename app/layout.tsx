@@ -50,10 +50,10 @@ export default function RootLayout({
               <div className="text-center space-y-2">
                 <p className="text-default-600">
                   Crafted with ❤️ by{" "}
-                  <span className="afro-gold font-semibold">DJ Pourmaster</span>
+                  <span className="afro-gold font-semibold">MBOA-NYC</span>
                 </p>
                 <p className="text-xs text-default-500">
-                  Powered by <span className="text-primary">HeroUI</span> & Next.js
+                  Curated Cultured Libations by Leo Dassie | Powered by <span className="text-primary">HeroUI</span> & Next.js
                 </p>
               </div>
             </footer>
