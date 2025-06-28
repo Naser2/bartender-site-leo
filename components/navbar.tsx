@@ -49,7 +49,7 @@ export const Navbar = () => {
             </div>
             <div>
               <p
-                className="font-bold  text-xl !text-white"
+                className="font-bold  text-xl text-mboa-gold hover:!text-white"
                 id="mboa-navbar-title"
               >
                 MBOA-NYC
