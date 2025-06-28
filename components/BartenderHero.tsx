@@ -103,16 +103,46 @@ export function BartenderHero() {
           animate="visible"
           variants={buttonVariants}
         >
-          <Button
-            as={Link}
-            href="/drinks"
-            size="lg"
-            className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold px-8 py-3 rounded-full hover:shadow-2xl hover:shadow-yellow-400/25 transition-all duration-300 transform hover:scale-105"
-            onPress={() => startTransition(() => {})}
-            isLoading={isPending}
-          >
-            🍹 Explore Signature Cocktails
-          </Button>
+          {/* Split Design Button */}
+          <div className="relative">
+            <Link href="/drinks" className="block">
+              <div 
+                className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full overflow-hidden hover:shadow-2xl hover:shadow-yellow-400/25 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                onClick={() => startTransition(() => {})}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    startTransition(() => {})
+                  }
+                }}
+              >
+                <div className="grid grid-cols-5 h-14 items-center">
+                  {/* Emoji section - 1/5th with darkened gradient */}
+                  <div className="col-span-1 h-full flex items-center justify-center bg-gradient-to-r from-yellow-500/80 to-yellow-700/80 relative">
+                    <span className="text-4xl">🍹</span>
+                    {/* Vertical divider line */}
+                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-px h-8 bg-black/20"></div>
+                  </div>
+                  
+                  {/* Text section - 4/5th */}
+                  <div className="col-span-4 px-4 py-3">
+                    <span className="text-black font-semibold text-sm md:text-base">
+                      Explore Signature Cocktails
+                    </span>
+                  </div>
+                </div>
+                
+                {/* Loading state overlay */}
+                {isPending && (
+                  <div className="absolute inset-0 bg-black/20 rounded-full flex items-center justify-center">
+                    <div className="w-5 h-5 border-2 border-black/50 border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
+              </div>
+            </Link>
+          </div>
 
           <Button
             as={Link}
