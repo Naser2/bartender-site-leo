@@ -3,27 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --afro-dark: #0F0F0F;
-  --afro-gold: #E9B96E;
-  --afro-soft-dark: #3C3C3C;
-  --afro-green: #91D18B;
-  --afro-violet: #8E44AD;
-  --afro-warm-orange: #FF8C42;
+  /* MBOA-NYC Brand Colors */
+  --mboa-gold: #E9B96E;
+  --mboa-gold-light: #F2C98A;
+  --mboa-gold-dark: #D4A355;
+  --mboa-green: #91D18B;
+  --mboa-green-muted: #7AC373;
+  --mboa-violet: #8E44AD;
+  --mboa-violet-muted: #7D3C98;
+  --mboa-dark: #0F0F0F;
+  --mboa-dark-light: #1A1A1A;
+  --mboa-dark-soft: #2A2A2A;
 }
 
-.afro-dark { background-color: var(--afro-dark); }
-.afro-gold { color: var(--afro-gold); }
-.afro-soft-dark { background-color: var(--afro-soft-dark); }
-.afro-green { color: var(--afro-green); }
-.afro-violet { color: var(--afro-violet); }
+/* Brand Color Utilities */
+.mboa-gold { color: var(--mboa-gold); }
+.mboa-green { color: var(--mboa-green-muted); }
+.mboa-violet { color: var(--mboa-violet-muted); }
+.mboa-text { color: #F5F5F5; } /* Harmonized text instead of pure white */
+
+/* Legacy support - gradually migrate away from these */
+.afro-gold { color: var(--mboa-gold); }
+.afro-green { color: var(--mboa-green-muted); }
+.afro-violet { color: var(--mboa-violet-muted); }
 
 .bartender-gradient {
-  background: linear-gradient(135deg, var(--afro-dark) 0%, var(--afro-soft-dark) 100%);
+  background: linear-gradient(135deg, var(--mboa-dark) 0%, var(--mboa-dark-soft) 100%);
 }
 
 .cocktail-shimmer {
-  background: linear-gradient(45deg, var(--afro-gold), var(--afro-green), var(--afro-violet));
-  background-size: 300% 300%;
+  background: linear-gradient(45deg, var(--mboa-gold), var(--mboa-gold-light));
+  background-size: 200% 200%;
   animation: shimmer 3s ease-in-out infinite;
 }
 
@@ -43,9 +53,18 @@
 }
 
 .glass-morphism {
-  background: rgba(60, 60, 60, 0.1);
-  backdrop-filter: blur(10px);
+  background: rgba(42, 42, 42, 0.6); /* Darker for better readability */
+  backdrop-filter: blur(16px);
   border: 1px solid rgba(233, 185, 110, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile-optimized glass effect */
+@media (max-width: 768px) {
+  .glass-morphism {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(12px);
+  }
 }
 
 /* Page transition styles */

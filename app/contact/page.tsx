@@ -39,7 +39,7 @@ const contactOptions = [
     description: "Quick response for urgent inquiries",
     action: "Message Now",
     href: siteConfig.links.whatsapp,
-    color: "from-green-400 to-green-600",
+    color: "from-mboa-gold to-mboa-gold-dark",
   },
   {
     icon: "📧",
@@ -47,7 +47,7 @@ const contactOptions = [
     description: "Detailed inquiries and proposals",
     action: "Send Email",
     href: siteConfig.links.email,
-    color: "from-blue-400 to-blue-600",
+    color: "from-mboa-gold to-mboa-gold-dark",
   },
   {
     icon: "📸",
@@ -55,7 +55,7 @@ const contactOptions = [
     description: "See latest creations and events",
     action: "Follow Me",
     href: siteConfig.links.instagram,
-    color: "from-pink-400 to-purple-600",
+    color: "from-mboa-gold to-mboa-gold-dark",
   },
 ];
 
@@ -77,7 +77,7 @@ function ContactContent() {
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="text-white">Let&apos;s </span>
-              <span className="cocktail-shimmer bg-clip-text text-transparent">
+              <span className="text-mboa-gold">
                 Connect
               </span>
             </h1>
@@ -121,19 +121,28 @@ function ContactContent() {
                   {contactOptions.map((option) => (
                     <motion.div
                       key={option.title}
-                      whileHover={{ scale: 1.02 }}
+                      whileHover={{ 
+                        scale: 1.02,
+                        transition: { type: "spring", stiffness: 300, damping: 20 }
+                      }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      <Card className="glass-morphism hover:border-yellow-400/50 transition-all duration-300">
+                      <Card className="glass-morphism hover:border-mboa-gold/50 hover:shadow-mboa-glow transition-all duration-300 cursor-pointer">
                         <CardBody className="p-6">
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-4">
-                              <div className="text-3xl">{option.icon}</div>
+                              <motion.div 
+                                className="text-3xl"
+                                whileHover={{ rotate: [0, -10, 10, 0] }}
+                                transition={{ duration: 0.5 }}
+                              >
+                                {option.icon}
+                              </motion.div>
                               <div>
-                                <h4 className="font-semibold text-white text-lg">
+                                <h4 className="font-semibold text-neutral-100 text-lg">
                                   {option.title}
                                 </h4>
-                                <p className="text-gray-400 text-sm">
+                                <p className="text-neutral-400 text-sm">
                                   {option.description}
                                 </p>
                               </div>
@@ -141,7 +150,7 @@ function ContactContent() {
                             <Button
                               isExternal
                               as={Link}
-                              className={`bg-gradient-to-r ${option.color} text-white font-semibold`}
+                              className={`bg-gradient-to-r ${option.color} text-black font-semibold hover:shadow-lg hover:shadow-mboa-gold/25`}
                               href={option.href}
                               size="sm"
                             >
@@ -156,28 +165,28 @@ function ContactContent() {
               </motion.div>
 
               {/* Availability & Pricing */}
-              <motion.div variants={fadeInVariants}>
+              <motion.div variants={fadeInVariants} className="mt-8">
                 <Card className="glass-morphism">
                   <CardBody className="p-6">
-                    <h3 className="text-xl font-bold afro-gold mb-4">
+                    <h3 className="text-xl font-bold mboa-gold mb-4">
                       📋 Event Information
                     </h3>
-                    <div className="space-y-3 text-gray-300">
-                      <div className="flex justify-between items-center py-2 border-b border-gray-700">
+                    <div className="space-y-3 text-neutral-300">
+                      <div className="flex justify-between items-center py-2 border-b border-neutral-700">
                         <span>Booking Notice</span>
-                        <span className="afro-green">2+ weeks preferred</span>
+                        <span className="mboa-green">2+ weeks preferred</span>
                       </div>
-                      <div className="flex justify-between items-center py-2 border-b border-gray-700">
+                      <div className="flex justify-between items-center py-2 border-b border-neutral-700">
                         <span>Service Area</span>
-                        <span className="afro-green">Nationwide</span>
+                        <span className="mboa-green">Nationwide</span>
                       </div>
-                      <div className="flex justify-between items-center py-2 border-b border-gray-700">
+                      <div className="flex justify-between items-center py-2 border-b border-neutral-700">
                         <span>Event Duration</span>
-                        <span className="afro-green">4-8 hours</span>
+                        <span className="mboa-green">4-8 hours</span>
                       </div>
                       <div className="flex justify-between items-center py-2">
                         <span>Starting Rate</span>
-                        <span className="afro-gold font-semibold">
+                        <span className="mboa-gold font-semibold">
                           Contact for quote
                         </span>
                       </div>
@@ -190,7 +199,7 @@ function ContactContent() {
               <motion.div variants={fadeInVariants}>
                 <Card className="glass-morphism">
                   <CardBody className="p-6">
-                    <h3 className="text-xl font-bold afro-violet mb-4">
+                    <h3 className="text-xl font-bold mboa-violet mb-4">
                       🍹 Services Offered
                     </h3>
                     <div className="grid grid-cols-2 gap-3">
@@ -208,8 +217,8 @@ function ContactContent() {
                           key={service}
                           className="flex items-center gap-2 p-2 rounded bg-white/5"
                         >
-                          <span className="w-2 h-2 rounded-full bg-yellow-400" />
-                          <span className="text-sm text-gray-300">
+                          <span className="w-2 h-2 rounded-full bg-mboa-gold" />
+                          <span className="text-sm text-neutral-300">
                             {service}
                           </span>
                         </div>

@@ -68,23 +68,23 @@ export function BartenderHero() {
           className="space-y-6"
         >
           {/* Main heading */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-100 leading-tight">
             <span className="block">MBOA-NYC</span>
-            <span className="block cocktail-shimmer bg-clip-text text-transparent">
+            <span className="block text-mboa-gold">
               by Leo Dassie
             </span>
           </h1>
 
           {/* Subtitle */}
           <motion.p
-            className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl text-neutral-300 max-w-2xl mx-auto leading-relaxed px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             MBOA-NYC Curated Cultured Libations and Experiences by LEO
             <br />
-            <span className="afro-gold">Master of cocktails, curator of vibes. Afro Pop bartender bringing liquid artistry to life.</span>
+            <span className="mboa-gold">Master of cocktails, curator of vibes. Afro Pop bartender bringing liquid artistry to life.</span>
           </motion.p>
 
           {/* Animated accent line */}
@@ -144,15 +144,32 @@ export function BartenderHero() {
             </Link>
           </div>
 
-          <Button
-            as={Link}
-            href="/contact"
-            variant="bordered"
-            size="lg"
-            className="border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
-          >
-            📞 Book an Experience
-          </Button>
+          {/* Book Experience Split Design Button */}
+          <div className="relative">
+            <Link href="/contact" className="block">
+              <div 
+                className="border-2 border-white rounded-full overflow-hidden hover:bg-white hover:shadow-2xl hover:shadow-white/25 transition-all duration-300 transform hover:scale-105 cursor-pointer group"
+                role="button"
+                tabIndex={0}
+              >
+                <div className="grid grid-cols-5 h-14 items-center">
+                  {/* Phone icon section - 1/5th with white background on hover */}
+                  <div className="col-span-1 h-full flex items-center justify-center bg-white/10 group-hover:bg-white/20 relative">
+                                         <span className="text-[27px] group-hover:scale-110 transition-transform duration-300">📞</span>
+                    {/* Vertical divider line */}
+                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-px h-8 bg-white/30"></div>
+                  </div>
+                  
+                  {/* Text section - 4/5th */}
+                  <div className="col-span-4 px-4 py-3">
+                    <span className="text-white group-hover:text-black font-semibold text-sm md:text-base transition-colors duration-300">
+                      Book an Experience
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
         </motion.div>
 
         {/* Scroll indicator */}

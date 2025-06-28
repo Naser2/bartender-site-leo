@@ -343,7 +343,15 @@ function DrinksContent() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800">
       {/* Hero Section */}
-      <section className="relative py-20 px-6">
+      <section 
+        className="relative py-20 px-6"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(15, 15, 15, 0.7), rgba(15, 15, 15, 0.7)), url("/67-Orange-Street-Bar-Harlem-Old-Fashioned.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
         <div className="max-w-7xl mx-auto">
           <motion.div
             animate="visible"
@@ -353,7 +361,7 @@ function DrinksContent() {
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="text-white">Signature </span>
-              <span className="cocktail-shimmer bg-clip-text text-transparent">
+              <span className="text-mboa-gold">
                 Cocktails
               </span>
             </h1>
@@ -370,31 +378,48 @@ function DrinksContent() {
             >
               <Input
                 className="glass-morphism"
+                classNames={{
+                  input: "px-4 py-2",
+                  inputWrapper: "px-4 py-3"
+                }}
                 placeholder="Search drinks, ingredients, or flavors..."
                 size="lg"
-                startContent={<span className="text-gray-400">🔍</span>}
+                startContent={<span className="text-neutral-400">🔍</span>}
                 type="text"
                 value={searchTerm}
                 onValueChange={setSearchTerm}
               />
 
-              <div className="flex flex-wrap justify-center gap-3">
-                {categories.map((category) => (
-                  <Button
+              <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+                {categories.map((category, index) => (
+                  <motion.div
                     key={category}
-                    className={
-                      selectedCategory === category
-                        ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold"
-                        : "border-white/30 text-white hover:border-yellow-400 hover:text-yellow-400"
-                    }
-                    isLoading={isPending && selectedCategory !== category}
-                    variant={
-                      selectedCategory === category ? "solid" : "bordered"
-                    }
-                    onPress={() => handleCategoryChange(category)}
+                    animate={{ scale: 1, opacity: 1 }}
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    transition={{ 
+                      delay: index * 0.05,
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20
+                    }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                   >
-                    {category}
-                  </Button>
+                    <Button
+                      className={
+                        selectedCategory === category
+                          ? "bg-gradient-to-r from-mboa-gold to-mboa-gold-dark text-black font-semibold"
+                          : "border-neutral-400/30 text-neutral-100 hover:border-mboa-gold hover:text-mboa-gold"
+                      }
+                      isLoading={isPending && selectedCategory !== category}
+                      variant={
+                        selectedCategory === category ? "solid" : "bordered"
+                      }
+                      onPress={() => handleCategoryChange(category)}
+                    >
+                      {category}
+                    </Button>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -432,7 +457,7 @@ function DrinksContent() {
                 cocktails.
               </p>
               <Button
-                className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold"
+                className="bg-gradient-to-r from-mboa-gold to-mboa-gold-dark text-black font-semibold"
                 onPress={() => {
                   setSearchTerm("");
                   setSelectedCategory("All");
@@ -453,7 +478,7 @@ function DrinksContent() {
             <div className="glass-morphism rounded-2xl p-8 max-w-4xl mx-auto">
               <h3 className="text-3xl font-bold text-white mb-4">
                 Ready to Experience These{" "}
-                <span className="afro-gold">Signature Creations?</span>
+                <span className="mboa-gold">Signature Creations?</span>
               </h3>
               <p className="text-gray-300 mb-6 text-lg">
                 Book MBOA-NYC for your next event and let your guests taste the
@@ -461,7 +486,7 @@ function DrinksContent() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
-                  className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold px-8 py-3 rounded-full hover:shadow-2xl hover:shadow-yellow-400/25 transition-all duration-300"
+                  className="bg-gradient-to-r from-mboa-gold to-mboa-gold-dark text-black font-semibold px-8 py-3 rounded-full hover:shadow-2xl hover:shadow-mboa-gold/25 transition-all duration-300"
                   size="lg"
                   onPress={() => (window.location.href = "/contact")}
                 >

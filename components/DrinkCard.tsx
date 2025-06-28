@@ -108,6 +108,8 @@ export function DrinkCard({ drink }: DrinkCardProps) {
         size="2xl"
         className="glass-morphism"
         backdrop="blur"
+        scrollBehavior="inside"
+        placement="center"
       >
         <ModalContent>
           {(onClose) => (
@@ -129,7 +131,7 @@ export function DrinkCard({ drink }: DrinkCardProps) {
                 </div>
               </ModalHeader>
 
-              <ModalBody>
+              <ModalBody className="py-6 max-h-[60vh] md:max-h-[70vh] overflow-y-auto">
                 <div className="space-y-6">
                   <div className="relative rounded-lg overflow-hidden">
                     <Image

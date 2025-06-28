@@ -35,21 +35,29 @@ function AboutContent() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800">
       {/* Hero Section */}
-      <section className="relative py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section 
+        className="relative py-12 md:py-20 px-4 md:px-8 lg:px-12 xl:px-16"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(15, 15, 15, 0.6), rgba(15, 15, 15, 0.6)), url("/67-Orange-Street-Bar-Harlem-Leo-Dassie-Mixing-Up.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="max-w-7xl 2xl:max-w-none 2xl:px-24 mx-auto">
           <motion.div
             animate="visible"
             className="text-center mb-16"
             initial="hidden"
             variants={fadeInVariants}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold mb-6">
               <span className="text-white">About </span>
-              <span className="cocktail-shimmer bg-clip-text text-transparent">
+              <span className="text-mboa-gold">
                 MBOA-NYC
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl xl:text-2xl text-gray-300 max-w-3xl xl:max-w-4xl mx-auto">
               Where curated cultured libations meet sophisticated experiences,
               creating unforgettable moments one cocktail at a time.
             </p>
@@ -58,15 +66,15 @@ function AboutContent() {
           {/* Main Content Grid */}
           <motion.div
             animate="visible"
-            className="grid lg:grid-cols-2 gap-12 items-center"
+            className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 2xl:gap-24 items-center"
             initial="hidden"
             variants={staggerContainer}
           >
             {/* Bio Section */}
             <motion.div className="space-y-6" variants={fadeInVariants}>
-              <Card className="glass-morphism">
-                <CardBody className="p-8">
-                  <h2 className="text-3xl font-bold afro-gold mb-6">
+              <Card className="glass-morphism -mt-5">
+                <CardBody className="p-6 md:p-8 xl:p-10">
+                  <h2 className="text-3xl font-bold mboa-gold mb-6">
                     Meet Leo Dassie
                   </h2>
                   <div className="space-y-4 text-gray-300 leading-relaxed">
@@ -93,8 +101,8 @@ function AboutContent() {
 
               {/* Skills/Specialties */}
               <Card className="glass-morphism">
-                <CardBody className="p-8">
-                  <h3 className="text-2xl font-bold afro-green mb-4">
+                <CardBody className="p-3 md:p-8">
+                  <h3 className="text-2xl font-bold mboa-green mb-4">
                     MBOA-NYC Specialties
                   </h3>
                   <div className="grid grid-cols-2 gap-4">
@@ -110,7 +118,7 @@ function AboutContent() {
                     ].map((skill) => (
                       <motion.div
                         key={skill}
-                        className="glass-morphism p-3 rounded-lg text-center"
+                        className="glass-morphism p-2 md:p-3 rounded-lg text-center"
                         transition={{ type: "spring", stiffness: 300 }}
                         whileHover={{ scale: 1.05 }}
                       >
@@ -182,13 +190,13 @@ function AboutContent() {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-white mb-4">
                 Ready for an{" "}
-                <span className="afro-gold">MBOA-NYC Experience?</span>
+                <span className="mboa-gold">MBOA-NYC Experience?</span>
               </h3>
               <SocialIcons className="justify-center" />
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                 <Button
                   as={Link}
-                  className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold px-8 py-3 rounded-full hover:shadow-2xl hover:shadow-yellow-400/25 transition-all duration-300"
+                  className="bg-gradient-to-r from-mboa-gold to-mboa-gold-dark text-black font-semibold px-8 py-3 rounded-full hover:shadow-2xl hover:shadow-mboa-gold/25 transition-all duration-300"
                   href="/drinks"
                   size="lg"
                 >
