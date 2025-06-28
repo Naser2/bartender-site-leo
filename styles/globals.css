@@ -76,3 +76,29 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* TARGETED WHITE TEXT FOR SPECIFIC NAVBAR ELEMENTS ONLY */
+#mboa-navbar-title {
+  color: white !important;
+}
+
+#mboa-navbar-subtitle {
+  color: white !important;
+}
+
+#mboa-navbar-menu-toggle,
+#mboa-navbar-menu-toggle *,
+#mboa-navbar-menu-toggle span,
+#mboa-navbar-menu-toggle [data-slot="wrapper"],
+#mboa-navbar-menu-toggle [class*="w-full"] {
+  color: white !important;
+  background-color: white !important;
+}
+
+#mboa-navbar-menu-toggle span::before,
+#mboa-navbar-menu-toggle span::after,
+#mboa-navbar-menu-toggle *::before,
+#mboa-navbar-menu-toggle *::after {
+  background-color: white !important;
+  border-color: white !important;
+}

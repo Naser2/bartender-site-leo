@@ -47,8 +47,8 @@ export const Navbar = () => {
               />
             </div>
                           <div>
-                <p className="font-bold text-white text-xl !text-white">MBOA-NYC</p>
-                <p className="text-xs text-white">by Leo Dassie</p>
+                <p id="mboa-navbar-title" className="font-bold text-white text-xl !text-white">MBOA-NYC</p>
+                <p id="mboa-navbar-subtitle" className="text-xs text-white">by Leo Dassie</p>
               </div>
           </NextLink>
         </NavbarBrand>
@@ -131,7 +131,7 @@ export const Navbar = () => {
           </svg>
         </Link>
         <ThemeSwitch />
-        <NavbarMenuToggle />
+        <NavbarMenuToggle id="mboa-navbar-menu-toggle" className="!text-white text-white [&>span]:!text-white [&>span]:text-white [&>span]:!bg-white [&>span]:bg-white [&>span]:before:!bg-white [&>span]:after:!bg-white" />
       </NavbarContent>
 
       <NavbarMenu>
